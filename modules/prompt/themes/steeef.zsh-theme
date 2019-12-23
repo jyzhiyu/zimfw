@@ -97,9 +97,11 @@ prompt_steeef_setup() {
   zstyle ':zim:git-info:keys' format \
     'prompt' "(${col_brnch}%b%c%I%i%u%f%S%f)%s"
 
-  PS1="
-${col_user}%n%f at ${col_host}%m%f in ${col_pwd}%~%f\$(prompt_steeef_git)\$(prompt_steeef_virtualenv)
-%(!.#.$) "
+#  PS1="
+#${col_user}%n%f at ${col_host}%m%f in ${col_pwd}%~%f\$(prompt_steeef_git)\$(prompt_steeef_virtualenv)
+#%(!.#.$) "
+#Modify to bash standard style
+  PS1="${col_user}%n%f@${col_host}%m%f:${col_pwd}%~%f\$(prompt_steeef_git)\$(prompt_steeef_virtualenv)%(!.#.$) "
   RPS1=''
 }
 
